@@ -4,27 +4,26 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 /**
- * 
- * @author Cleiton Dsd'
+ * Classe que gerencia a √∫nica inst√¢ncia da EntityManagerFactory 
  *
- *         Classe que gerencia a ˙nica inst‚ncia da EntityManagerFactory
  */
 public class EntityManagerFactorySingleton {
 
-	// 1 - Atributo est·tico que armazena a ˙nica inst‚ncia
+	// 1 - Atributo est√°tico que armazena a √∫nica inst√¢ncia
 	private static EntityManagerFactory fabrica;
-
-	// 2 - Construtor privado -> ninguÈm consegue inst‚nciar
-	private EntityManagerFactorySingleton() {
-	}
-
-	// 3 - MÈtodo est·tico que retorna a ˙nica inst‚ncia
+	
+	// 2 - Construtor privado -> ninguem consegue instanciar
+	private EntityManagerFactorySingleton() {}
+	
+	// 3 - M√©todo est√°tico que retorna a √∫nica inst√¢ncia
 	public static EntityManagerFactory getInstance() {
-
-		// Validar se existe a f·brica
+		
+		//Validar se existe a fabrica
 		if (fabrica == null) {
 			fabrica = Persistence.createEntityManagerFactory("oracle");
 		}
+		
 		return fabrica;
 	}
+ 	
 }

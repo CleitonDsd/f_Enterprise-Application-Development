@@ -5,22 +5,28 @@
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 		<properties>
 			<property name="hibernate.show_sql" value="true" />
+			
 			<!-- 
-			update -> criar/atualizar ás tabelas
-			create -> apaga e cria ás tabelas
-			validate -> valida se ás tabelas estão de acrodo com as classes 
-			-->
-			<property name="hibernate.hbm2ddl.auto" value="update" />
+				update -> criar/atualizar as tabelas
+				create -> apaga e cria as tabelas
+				validate -> valida se as tabelas estão de acordo com as classes
+			 -->
+			<property name="hibernate.hbm2ddl.auto" value="create" />
+			
 			<property name="hibernate.dialect"
 				value="org.hibernate.dialect.Oracle12cDialect" />
+				
 			<property name="javax.persistence.jdbc.driver"
-				value="oracle.jsdbc.OracleDriver" />
-			<property name="javax.persistence.jdbc.user"
-				value="rm86257" />
+				value="oracle.jdbc.OracleDriver" />
+				
+			<property name="javax.persistence.jdbc.user" value="PF0392" />
+			
 			<property name="javax.persistence.jdbc.password"
-				value="011100" />
+				value="fiap" />
+				
 			<property name="javax.persistence.jdbc.url"
 				value="jdbc:oracle:thin:@oracle.fiap.com.br:1521:orcl" />
+				
 		</properties>
 	</persistence-unit>
 </persistence>
